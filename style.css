@@ -1,0 +1,431 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: 'Arial', sans-serif;
+  background: #000;
+  color: #fff;
+  overflow-x: hidden;
+  transition: background-color 0.5s ease;
+}
+
+/* Dark/Light Mode */
+body.dark-mode {
+  background: #fff;
+  color: #000;
+}
+
+/* Theme Toggle */
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 10000;
+}
+
+#dark-light-toggle {
+  display: none;
+}
+
+label[for="dark-light-toggle"] {
+  cursor: pointer;
+  background: #333;
+  color: #fff;
+  padding: 10px;
+  border-radius: 20px;
+  transition: 0.5s ease;
+}
+
+body.dark-mode label[for="dark-light-toggle"] {
+  background: #ccc;
+  color: #000;
+}
+
+/* Loading Screen */
+#loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: fadeOut 6s forwards;
+}
+
+.loading-text {
+  font-size: 3em;
+  color: #ff00ff;
+  animation: float 3s infinite, glow 1s infinite alternate;
+}
+
+.loading-spinner {
+  border: 5px solid #fff;
+  border-top: 5px solid #ff00ff;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-20px);
+  }
+}
+
+@keyframes glow {
+  0% {
+      text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #00ffff;
+  }
+  100% {
+      text-shadow: 0 0 20px #ff00ff, 0 0 30px #00ffff, 0 0 40px #00ffff;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+      opacity: 1;
+  }
+  100% {
+      opacity: 0;
+      display: none;
+  }
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(90deg, #ff00ff, #00ffff, #ff00ff);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  transition: background-color 0.5s ease;
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+}
+
+header h1 {
+  margin-left: 10px;
+}
+
+header nav ul {
+  display: flex;
+  list-style-type: none;
+}
+
+header nav ul li a {
+  margin: 0 10px;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+header nav ul li a:hover {
+  background-color: #ff00ff;
+}
+
+header.scrolled {
+  background-color: #111;
+}
+
+/* Parallax Video */
+.parallax-section {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.background-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.video-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  animation: fadeInUp 2s ease;
+}
+
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(50px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* About Section */
+#about {
+  padding: 100px 50px;
+  background: #222;
+}
+
+.about-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about-image {
+  position: relative;
+  width: 400px;
+  height: 400px;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.floating-shape {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  background: linear-gradient(90deg, #ff00ff, #00ffff);
+  border-radius: 20px;
+  z-index: -1;
+  animation: float 5s infinite alternate;
+}
+
+/* Milk Types */
+.milk-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 50px;
+  gap: 20px;
+}
+
+.milk-box {
+  background: #222;
+  padding: 20px;
+  border-radius: 10px;
+  width: calc(30% - 40px);
+  text-align: center;
+  color: #fff;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.milk-box:hover {
+  transform: translateY(-10px);
+  background-color: #ff00ff;
+}
+
+/* Contact Section */
+form input, form textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #333;
+}
+
+/* Footer */
+footer {
+  padding: 20px;
+  background: #111;
+  text-align: center;
+}
+
+.social-links a {
+  color: #fff;
+  margin: 0 15px;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+.social-links a:hover {
+  color: #ff00ff;
+}
+/* Parallax Effect for Our Milk */
+#our-milk {
+  position: relative;
+  background: url('milk-background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+  color: #fff;
+  padding: 100px 50px;
+}
+
+#our-milk .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.our-milk-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.animated-title {
+  font-size: 3em;
+  color: #ff00ff;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  animation: titleFadeIn 2s ease-in-out;
+}
+
+@keyframes titleFadeIn {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.milk-description {
+  font-size: 1.2em;
+  line-height: 1.6;
+  margin-bottom: 50px;
+  animation: textFade 3s ease;
+}
+
+@keyframes textFade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Nutrition Chart */
+.nutrition-chart {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  animation: chartPop 2s ease-in-out;
+}
+
+@keyframes chartPop {
+  0% { transform: scale(0.8); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.chart-grid {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.chart-item {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.chart-item:hover {
+  transform: scale(1.1);
+}
+
+/* Contact Form Enhancements */
+.contact-form {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+  animation: formSlideUp 2s ease-in-out;
+}
+
+@keyframes formSlideUp {
+  0% { opacity: 0; transform: translateY(50px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.form-input, .form-textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.form-input:focus, .form-textarea:focus {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: #ff00ff;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(45deg, #ff00ff, #00ffff);
+  border: none;
+  color: #fff;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-size 0.4s ease;
+}
+
+.submit-btn:hover {
+  background-size: 150%;
+}
+
+.social-icons {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.social-link {
+  font-size: 2em;
+  margin: 0 10px;
+  color: #fff;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-link:hover {
+  transform: translateY(-5px);
+  color: #ff00ff;
+}
+

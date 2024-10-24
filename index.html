@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MMFO: Mubbashir Milk Factory Organization</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Dark/Light Mode Toggle Button -->
+    <div class="theme-toggle">
+        <input type="checkbox" id="dark-light-toggle" aria-label="Toggle Dark/Light Mode">
+        <label for="dark-light-toggle">Dark/Light</label>
+    </div>
+
+    <!-- Loading Screen -->
+    <div id="loading">
+        <h1 class="loading-text">MMFO: Mubbashir Milk Factory Organization</h1>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="462555258_4654960621417745_5992519036741395226_n.jpg" alt="MMFO Logo">
+            <h1>MMFO</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#milk-types">Milk Types</a></li>
+                <li><a href="#our-milk">Our Milk</a></li>
+                <li><a href="#contract">Contract</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Section with Background Video -->
+    <section id="home">
+        <video autoplay muted loop class="background-video">
+            <source src="Untitled design.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="about-content">
+            <div class="about-image">
+                <img src="Untitled design.png" alt="Cow">
+                <div class="floating-shape"></div>
+            </div>
+            <div class="about-text">
+                <h2>About Me</h2>
+                <p>Hi! I'm Owner of a MMFO, and welcome to our milk factory website where we prioritize quality and freshness...</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Milk Types Section -->
+    <section id="milk-types">
+        <h2>Milk Types</h2>
+        <div class="milk-boxes">
+            <div class="milk-box">Chocolate</div>
+            <div class="milk-box">Strawberry</div>
+            <div class="milk-box">Vanilla</div>
+            <div class="milk-box">Almond</div>
+            <div class="milk-box">Hazelnut</div>
+            <div class="milk-box">Banana</div>
+            <div class="milk-box">Coconut</div>
+            <div class="milk-box">Soy</div>
+            <div class="milk-box">Oat</div>
+            <div class="milk-box">Lactose-Free</div>
+        </div>
+        <p class="flavor-desc">Choose from a wide range of delicious flavored milk varieties...</p>
+    </section>
+
+    <!-- Our Milk Section -->
+<section id="our-milk" class="parallax-section">
+    <div class="overlay"></div>
+    <div class="our-milk-content">
+        <h2 class="animated-title">Our Milk</h2>
+        <p class="milk-description">
+            Our milk is pasteurized on the farm. Within minutes of the cows being milked, 
+            the milk is gently heated to 68.6 degrees for two minutes and then quickly chilled 
+            to 3 degrees. A simple process with surprisingly delicious results.
+        </p>
+        <div class="nutrition-chart">
+            <h3>Nutritional Information</h3>
+            <div class="chart-grid">
+                <div class="chart-item">
+                    <h4>Calories</h4>
+                    <p>120 kcal</p>
+                </div>
+                <div class="chart-item">
+                    <h4>Protein</h4>
+                    <p>8g</p>
+                </div>
+                <div class="chart-item">
+                    <h4>Fat</h4>
+                    <p>8g</p>
+                </div>
+                <div class="chart-item">
+                    <h4>Calcium</h4>
+                    <p>300mg</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- Contract Section -->
+    <section id="contract">
+        <h2>Contract</h2>
+        <img src="CONTRACT AGREEMENT (KY 2021-22) BETWEEN ESTABLISHMENT DIVISION & MIS.png" alt="Contract">
+    </section>
+
+    <!-- Contact Section -->
+<section id="contact">
+    <h2 class="section-title">Contact Us</h2>
+    <form action="https://web3forms.com/submit" method="POST" class="contact-form">
+        <input type="text" name="name" placeholder="Your Name" class="form-input" required>
+        <input type="email" name="email" placeholder="Your Email" class="form-input" required>
+        <textarea name="message" placeholder="Your Message" class="form-textarea" required></textarea>
+        <button type="submit" class="submit-btn">Send Message</button>
+    </form>
+    <div class="social-icons">
+        <a href="https://facebook.com" class="social-link"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://linkedin.com" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com" class="social-link"><i class="fab fa-github"></i></a>
+    </div>
+</section>
+        <p>&copy; 2024 MMFO: Mubbashir Milk Factory Organization</p>
+    </footer>
+</body>
+</html>
